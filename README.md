@@ -33,7 +33,7 @@ El objetivo es analizar estos datos para ajustar primas y diseñar estrategias d
   * localizacion : Este campo contiene el lugar del accidente, sea una calle con un número, una intersección, o el kilometro de una autovia. En principio no ha sido necesario modificar nada de este campo. 
     
   * tipo_accidente : Este campo estaba correcto un su mayor parte se limpió unos datos vacios, y otros que contenian datos del campo localizacion (errores). También se detectó que los datos de colisiones multiples y colisiones dobles tenían errores ya que el número de conductores involucrados no podia ser correcto (colisión doble con uno o ningún conductor, multiples con menos de 3 conductores,etc...)
-    Esto se reparó desde la base de datos que creamos usando SQL.
+    Esto se reparó desde la base de datos usando SQL.
     ```
     DELETE FROM accidentes
     WHERE num_expediente IN (
@@ -72,15 +72,15 @@ El objetivo es analizar estos datos para ajustar primas y diseñar estrategias d
   * rango_edad : Este campo estaba correcto, contiene valores de edad en rangos.
   * sexo : Esta campo contiene H (hombre), o M (mujer).
   * lesividad : Ciertos campos información incorrecta. Los valores validos para este campo son :
-        - Asistencia sanitaria ambulatorio con posteridad.
-        - Asistencia sanitaria inmediata en centro de salud o mutua.
-        - Asistencia sanitaria sólo en el lugar del accidente.
-        - Atención en urgencias sin posterior ingreso.
-        - Fallecido 24 horas.
-        - Ingreso inferior o igual a 24 horas.
-        - Ingreso superior a 24 horas.
-        - Se desconoce.
-        - Sin asistencia sanitaria.
+    - Asistencia sanitaria ambulatorio con posteridad.
+    - Asistencia sanitaria inmediata en centro de salud o mutua.
+    - Asistencia sanitaria sólo en el lugar del accidente.
+    - Atención en urgencias sin posterior ingreso.
+    - Fallecido 24 horas.
+    - Ingreso inferior o igual a 24 horas.
+    - Ingreso superior a 24 horas.
+    - Se desconoce.
+    - Sin asistencia sanitaria.
     
   * coordenada_x_utm y coordenada_y_utm: Estas coordenadas se unificaron a un estandar de precision de tipo 123456.000 para posteriormente generar con ellos la longitud y la latitud. 
   * positiva_alcohol y positiva_droga Estos 2 campos contenian muchos valores vacios o nulos. Se conviertieron los valores S (Si) a 1 y el resto de valores a 0, para usar estos campos como tipo booleano.
