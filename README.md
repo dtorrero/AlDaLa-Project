@@ -52,7 +52,7 @@ El objetivo es analizar estos datos para ajustar primas y diseñar estrategias d
             (tipo_accidente = 'colisión doble' AND COUNT(DISTINCT CASE WHEN tipo_persona = 'conductor' THEN id END) != 2) OR
             (tipo_accidente = 'colisión multiple' AND COUNT(DISTINCT CASE WHEN tipo_persona = 'conductor' THEN id END) < 3)
     ) AS problematic_cases
-);
+    );
     ```
     Los diferentes tipos incluyen :
     - Colisión doble: Accidente de tráfico ocurrido entre dos vehículos en movimiento, (colisión frontal, fronto lateral, lateral)
