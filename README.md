@@ -6,6 +6,8 @@
 
 ## 1. Definición del Objetivo del Dashboard	
 
+En base a unos datos de accidentes en la zona norte de Madrid, vamos a realizar un estudio de riesgo para uso del cliente, una aseguradora. 
+
 El objetivo es analizar estos datos para ajustar primas y diseñar estrategias de prevención basadas en patrones de siniestralidad.
 - ¿Qué problema queremos resolver?
     Analisis perfilado para la Politica de precios en base a criterios estadísticos. 
@@ -22,7 +24,6 @@ El objetivo es analizar estos datos para ajustar primas y diseñar estrategias d
   
 ## 3. Limpieza de datos, Identificar problemas, Controlar consistencia de los datos
 
-- Data Profiling :	Analizar los datos para entender su estructura, contenido y calidad: Descriptive Statistics, Data Visualization, Data Auditing.
   Campos originales:
   * num_expediente : El número de expediente se refiere a un codigo que apunta a cada persona involucrada en un accidente de tráfico. Así por ejemplo un caso pdoría ser un accidente en que hay 3 personas involucradas, un motorista (conductor) , un turismo (conductor) y una tercera persona (pasajero) del vehiculo. Cada uno de estos registros debe concoordar con el resto de datos de su mismo num_expediente excepto los que refieren a la persona involucrada, sexo y rango de edad. El contenido de este campo no ha sido modificado. 
           
@@ -84,11 +85,15 @@ El objetivo es analizar estos datos para ajustar primas y diseñar estrategias d
     
   * coordenada_x_utm y coordenada_y_utm: Estas coordenadas se unificaron a un estandar de precision de tipo 123456.000 para posteriormente generar con ellos la longitud y la latitud. 
   * positiva_alcohol y positiva_droga Estos 2 campos contenian muchos valores vacios o nulos. Se conviertieron los valores S (Si) a 1 y el resto de valores a 0, para usar estos campos como tipo booleano.
+
+Nuevos campos: 
+Se añade un campo nuevo ID como campo único para identificar cada registro. 
  
 
-4. Análisis: Transformación y Modelado	
+## 3. Análisis: Transformación y Modelado	
 Enumeración de los dasboards	
 Variables compuestas	
-5. Visualización del Dashboard	
-6. Deploy del Dashboard	
-7. Colaboración y Control de Versiones	
+
+## 4. Visualización del Dashboard	
+## 5. Deploy del Dashboard	
+## 6. Colaboración y Control de Versiones	
