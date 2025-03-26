@@ -1,8 +1,8 @@
 # AlDaLa Proyect - A Data Analisis learning project.
 
-Estrellas invitadas: David, Laura y Ale. 
-
 <img src="logo_aldala.png"> 
+
+Estrellas invitadas: David, Laura y Ale. 
 
 ## 1. Definición del Objetivo del Dashboard
 
