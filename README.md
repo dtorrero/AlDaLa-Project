@@ -32,8 +32,27 @@ Sin embargo, debido al gran volumen de datos, el tratamiento en esta herramienta
 En paralelo, se decidió crear una base de datos en **MySQL** para poder interactuar con los datos y limpiarlos de forma ágil y eficiente.
 
 ---
+## 3. Exploración Inicial: ¿Qué nos encontramos?
 
-## 3. Limpieza de Datos, Identificación de Problemas y Control de Consistencia
+Antes de comenzar con la limpieza y el modelado, realizamos una primera exploración del conjunto de datos usando técnicas de métricas de estadística descriptiva y gráficos. Estos fueron los principales hallazgos:
+
+- **Gran volumen de datos:**  
+  El dataset contiene un número elevado de registros, lo que hizo necesario usar herramientas más robustas que Google Sheets para su tratamiento.
+
+- **Formatos variados:**  
+  Algunos campos presentaban formatos inconsistentes (por ejemplo, fechas y horas en diferentes estilos), lo que dificultaba su análisis directo.
+
+- **Presencia significativa de valores en blanco o nulos:**  
+  Muchos campos estaban incompletos o contenían valores vacíos, lo cual obligó a tomar decisiones sobre imputación o exclusión.
+
+- **Alta variabilidad en los valores:**  
+  Se encontraron múltiples formas de expresar una misma categoría (por ejemplo, variaciones en nombres de vehículos, fenómenos meteorológicos o tipos de accidente), lo que requirió una normalización exhaustiva.
+
+Esta etapa fue clave para diseñar una estrategia de limpieza y estructuración de los datos, permitiendo un análisis más preciso y confiable en las siguientes fases del proyecto.
+
+---
+
+## 4. Limpieza de Datos, Identificación de Problemas y Control de Consistencia
 
 ### Campos originales:
 
@@ -217,7 +236,7 @@ function UTMtoLatLon(easting, northing, zone, hemisphere) {
 
 ---
 
-## 3. Análisis: Transformación y Modelado
+## 5. Análisis: Transformación y Modelado
 
 - **Enumeración de los dashboards:**  
   Se desarrollaron diferentes visualizaciones para representar de forma clara los datos clave para la aseguradora, facilitando el análisis por parte de los usuarios.
@@ -227,21 +246,21 @@ function UTMtoLatLon(easting, northing, zone, hemisphere) {
 
 ---
 
-## 4. Visualización del Dashboard
+## 6. Visualización del Dashboard
 
 Se diseñó un dashboard interactivo orientado a analistas y directivos, con filtros por perfil, zona, tipo de accidente, entre otros.  
 Incluye KPIs visuales y gráficos dinámicos para facilitar la exploración de los datos y la toma de decisiones.
 
 ---
 
-## 5. Deploy del Dashboard
+## 7. Deploy del Dashboard
 
 El dashboard fue desplegado en una plataforma accesible para los usuarios de la aseguradora.  
 (🔧 *Aquí puedes detallar si usaste herramientas como Streamlit, Power BI, Tableau, etc., y si está disponible públicamente o solo internamente*).
 
 ---
 
-## 6. Colaboración y Control de Versiones
+## 8. Colaboración y Control de Versiones
 
 El proyecto se gestiona mediante **Git** y **GitHub**, lo que facilita el trabajo colaborativo y el seguimiento de cambios.  
 Se recomienda trabajar con ramas (`branches`) para nuevas funcionalidades y usar `pull requests` para revisión de código antes de fusionar en la rama principal.
